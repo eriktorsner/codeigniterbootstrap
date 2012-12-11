@@ -50,7 +50,7 @@ function process($argv)
 	// Get list of mods to run into an array
 	$mods = array();
 	$github_cmd = "$apiurl/repos/$repo/contents";
-	echo "Getting list of mods $github_cmd \n";
+	echo "Getting list of mods $github_cmd \n\n";
 	$content = get_content_from_github($github_cmd);
 	foreach($content as $file)
 	{
