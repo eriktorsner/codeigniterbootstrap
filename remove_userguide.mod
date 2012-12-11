@@ -6,5 +6,7 @@
 * 
 */
 
-rmdir("$ci_folder/user_guide");
+$cmd = "rm -rf $ci_folder/user_guide";
+exec($cmd);
+
 
