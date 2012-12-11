@@ -64,6 +64,7 @@ function process($argv)
 
 			$f = $mod["name"];
 			echo "Downloading mod: $f\n";
+			echo $gitfileurl/$repo/master/$f . "\n";
 			$cmd = "curl -sL $gitfileurl/$repo/master/$f  > $f";
 			exec($cmd);
 			
