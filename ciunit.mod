@@ -26,5 +26,5 @@ exec($cmd);
 
 // Remove archive
 echo "Cleaning up download\n";
-$cmd = "rm -rf ci.zip";
+$cmd = "rm -rf ciunit.zip";
 exec($cmd);
