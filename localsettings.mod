@@ -33,7 +33,7 @@ define('CONST_CONFIG_BASE_URL',  	"http://localhost/myproject");
 define('CONST_DB_DEFAULT_HOSTNAME', "localhost");
 define('CONST_DB_DEFAULT_USERNAME', "user");
 define('CONST_DB_DEFAULT_PASSWORD', "pass");
-define('CONST_DB_DEFAULT_DATABASE', "database");*/
+define('CONST_DB_DEFAULT_DATABASE', "database");
 
 
 /* End of file localsettings.php */
