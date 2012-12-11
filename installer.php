@@ -50,6 +50,7 @@ function process($argv)
 	// Get list of mods to run into an array
 	$mods = array();
 	$github_cmd = "$apiurl/repos/$repo/contents";
+	echo "Getting list of mods $github_cmd \n";
 	$content = get_content_from_github($github_cmd);
 	foreach($content as $file)
 	{
@@ -62,6 +63,7 @@ function process($argv)
 			$mods[] = $mod;
 
 			$f = $mod["name"];
+			echo "Downloading mod: $f\n";
 			$cmd = "curl -sL $gitfileurl/$repo/master/$f  > $f";
 			exec($cmd);
 			
@@ -70,6 +72,7 @@ function process($argv)
 			echo "Applying mod: $f\n";
 			require_once($f);
 			unlink($f);
+			echo "\n";
 
 		}
 	}
