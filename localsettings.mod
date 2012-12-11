@@ -51,7 +51,7 @@ file_put_contents($target_file, $localsettings);
 $target_file = "$ci_folder/application/config/config.php";
 $config_file = file_get_contents($target_file);
 $rows = split("\n", $config_file);
-$inserted = array("require_once localsettings.php");
+$inserted = array('require_once "localsettings.php";');
 array_splice($rows, 2, 0, $inserted);
 $config_file = join("\n", $rows);
 
@@ -61,11 +61,11 @@ $config_file = str_replace("config['base_url']	= '';",
 file_put_contents($target_file, $config_file);
 
 
-// 2. Modify config/database.php to include this file:
+// 3. Modify config/database.php to include this file:
 $target_file = "$ci_folder/application/config/database.php";
 $config_file = file_get_contents($target_file);
 $rows = split("\n", $config_file);
-$inserted = array("require_once localsettings.php\n\n");
+$inserted = array('require_once "localsettings.php";' . "\n");
 array_splice($rows, 1, 0, $inserted);
 $config_file = join("\n", $rows);
 
