@@ -23,4 +23,11 @@ exec($cmd);
 $cmd = "cp -r boostrap/js $ci_folder/";
 exec($cmd);
 
+echo "Cleaning up\n";
+$cmd = "rm -rf boostrap";
+exec($cmd);
+$cmd = "rm -rf boostrap.zip";
+exec($cmd);
+
+
 
