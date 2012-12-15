@@ -26,5 +26,10 @@ exec($cmd);
 $cmd = "mv Twig-Codeigniter/application/third_party/Twig $ci_folder/application/third_party/";
 exec($cmd);
 
+echo "Cleaning up....\n";
+$cmd = "rm -rf Twig-Codeigniter/";
+exec($cmd);
+
+
 
 
