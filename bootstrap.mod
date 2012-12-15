@@ -16,17 +16,17 @@ exec($cmd);
 
 // move files and folders into the CI install
 echo "Moving bootstrap files into CodeIgniter folder\n";
-$cmd = "cp -r boostrap/css $ci_folder/";
+$cmd = "cp -r bootstrap/css $ci_folder";
 exec($cmd);
-$cmd = "cp -r boostrap/img $ci_folder/";
+$cmd = "cp -r bootstrap/img $ci_folder";
 exec($cmd);
-$cmd = "cp -r boostrap/js $ci_folder/";
+$cmd = "cp -r bootstrap/js $ci_folder";
 exec($cmd);
 
 echo "Cleaning up\n";
-$cmd = "rm -rf boostrap";
+$cmd = "rm -rf bootstrap";
 exec($cmd);
-$cmd = "rm -rf boostrap.zip";
+$cmd = "rm -rf bootstrap.zip";
 exec($cmd);
 
 
