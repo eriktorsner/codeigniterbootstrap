@@ -77,7 +77,17 @@ function process($argv)
 
 		}
 	}
-	echo "All mod's have executed. Done!\n\n";
+	echo "All mod's have executed.\n\n";
+	echo "Moving content of $ci_folder into current folder....";
+	$cmd = "mv $ci_folder/* .";
+	exec($cmd);
+	$cmd = "rm -rf $ci_folder";
+	exec($cmd);
+	echo "done.\n\n";
+
+	echo "codeigniterbootstrap done.\n\n";
+
+
 }
 
 
