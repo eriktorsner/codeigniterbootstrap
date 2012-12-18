@@ -11,13 +11,13 @@ exec($cmd);
 
 
 echo "Moving into project folders....\n";
-$cmd = "mv gas-orm/application/config/gas.php $ci_folder/application/config/";
+$cmd = "mv gas-orm/config/gas.php $ci_folder/application/config/";
 exec($cmd);
 $cmd = "mv gas-orm/libraries/gas $ci_folder/application/libraries/";
 exec($cmd);
 $cmd = "mv gas-orm/libraries/gas.php $ci_folder/application/libraries/";
 exec($cmd);
-$cmd = "mv Twig-Codeigniter/application/third_party/gas $ci_folder/application/third_party/";
+$cmd = "mv gas-orm/third_party/gas $ci_folder/application/third_party/";
 exec($cmd);
 
 echo "Cleaning up....\n";
