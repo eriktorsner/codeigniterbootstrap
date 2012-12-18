@@ -19,6 +19,8 @@ $cmd = "mv gas-orm/libraries/gas.php $ci_folder/application/libraries/";
 exec($cmd);
 $cmd = "mv gas-orm/third_party/gas $ci_folder/application/third_party/";
 exec($cmd);
+$cmd = "mv gas-orm/language/english/gas_lang.php $ci_folder/application/language/english";
+exec($cmd);
 
 echo "Cleaning up....\n";
 $cmd = "rm -rf gas-orm";
