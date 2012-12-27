@@ -5,7 +5,6 @@
  * @author Erik Torsner <erik@torgesta.com>
  * @author Bennet Matschullat, 3mweb <bennet@giantmedia.de>
  * @date 27.12.12 - 22:39
- * @github <bmatschullat>
  */
 
 
