@@ -11,23 +11,6 @@
 // call installer
 process( $argv );
 
-
-function cmd_readline( $prompt, $valid_inputs, $default = '' )
-{
-	while ( (!isset( $input ) || $input === '' ) || ( is_array( $valid_inputs ) && !in_array( $input, $valid_inputs ) ) )
-	{
-		echo $prompt;
-		$input = trim( fgets( STDIN ) ) ;
-		if ( empty( $input ) && !empty( $default ) )
-		{
-			$input = $default;
-		}
-	}
-
-	return $input;
-}
-
-
 /**
  * processes the installer
  */
@@ -138,5 +121,17 @@ function get_content_from_github( $url )
 }
 
 
+function cmd_readline( $prompt, $valid_inputs, $default = '' )
+{
+	while ( (!isset( $input ) || $input === '' ) || ( is_array( $valid_inputs ) && !in_array( $input, $valid_inputs ) ) )
+	{
+		echo $prompt;
+		$input = trim( fgets( STDIN ) ) ;
+		if ( empty( $input ) && !empty( $default ) )
+		{
+			$input = $default;
+		}
+	}
 
-
+	return $input;
+}
