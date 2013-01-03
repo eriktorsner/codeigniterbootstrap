@@ -15,14 +15,15 @@ $cmd = "mv php-activerecord $ci_folder/application/third_party";
 echo "Enable hooks in application/config/config.php\n";
 $target_file = "$ci_folder/application/config/config.php";
 $config_file = file_get_contents($target_file);
-$needle = "$config['enable_hooks'] = FALSE;";
-$newneedle = "$config['enable_hooks'] = TRUE;";
+$needle = "\$config['enable_hooks'] = FALSE;";
+$newneedle = "\$config['enable_hooks'] = TRUE;";
 $config_file = str_replace($needle, $newneedle, $config_file);
 file_put_contents($target_file, $config_file);
 
 echo "Add hook in application/config/hooks.php\n";
 $hook_code = <<<EOD
-$hook['pre_controller'][] = array(
+
+\$hook['pre_controller'][] = array(
     'class'    => '',
     'function' => 'initialize_php_activerecord',
     'filename' => 'CI_ActiveRecord.php',
