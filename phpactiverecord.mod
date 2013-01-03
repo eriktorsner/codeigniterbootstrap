@@ -4,13 +4,13 @@
 * 
 */
 
-// Get the latest gas
-echo "Fetching latest gas from github.com/toopay/gas-orm....\n";
+// Get the latest phpactiverecord 
+echo "Fetching latest phpactiverecord from github.com/toopay/gas-orm....\n";
 $cmd = "git clone git://github.com/eriktorsner/php-activerecord.git";
 exec($cmd);
 
 echo "Moving into application/third_party ..\n";
-$cmd = "mv php-activerecord $ci_folder/application/third_party";
+$cmd = "mv php-activerecord $ci_folder/application/third_party/";
 
 echo "Enable hooks in application/config/config.php\n";
 $target_file = "$ci_folder/application/config/config.php";
