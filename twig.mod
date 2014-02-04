@@ -5,8 +5,8 @@
 */
 
 // Get the latest CI
-echo "Fetching latest Twig from github.com/eriktorsner....\n";
-$cmd = "git clone git@github.com:eriktorsner/Twig-Codeigniter.git";
+echo "Fetching latest Twig from github.com/bmatschullat....\n";
+$cmd = "git clone git@github.com:bmatschullat/Twig-Codeigniter.git";
 exec($cmd);
 
 // get the submodule
